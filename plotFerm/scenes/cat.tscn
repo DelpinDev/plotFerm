@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://b6cgprm4jewp4"]
+
+[ext_resource type="Script" path="res://scripts/cat.gd" id="1_h3upq"]
+[ext_resource type="Texture2D" uid="uid://d3c8nt4omjrpq" path="res://assets/cat.png" id="2_wrl51"]
+[ext_resource type="PackedScene" uid="uid://behrhe55ojd7y" path="res://scenes/killzone.tscn" id="3_21uu5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ebfmc"]
+radius = 4.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yxhie"]
+radius = 5.0
+height = 12.0
+
+[node name="cat" type="StaticBody2D"]
+collision_mask = 2
+script = ExtResource("1_h3upq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_wrl51")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_ebfmc")
+debug_color = Color(0.89009, 0.000253938, 0.794201, 0.42)
+
+[node name="killzone" parent="." instance=ExtResource("3_21uu5")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+position = Vector2(0, 2)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_yxhie")
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+target_position = Vector2(-9, 0)
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+target_position = Vector2(9, 0)
+
+[node name="RayCastRightDown" type="RayCast2D" parent="."]
+target_position = Vector2(8, 8)
+
+[node name="RayCastLeftDown" type="RayCast2D" parent="."]
+target_position = Vector2(-8, 8)

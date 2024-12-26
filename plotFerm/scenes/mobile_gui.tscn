@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=3 uid="uid://nw4aeeoc1sws"]
+
+[ext_resource type="Texture2D" uid="uid://i7afgyehck5" path="res://assets/up_button.png" id="1_8vtjs"]
+[ext_resource type="Script" path="res://scenes/mobile_gui.gd" id="1_st3ob"]
+[ext_resource type="Texture2D" uid="uid://cldgd8bjugbh8" path="res://assets/left_button.png" id="2_fu4or"]
+[ext_resource type="Texture2D" uid="uid://cfktivllrqdno" path="res://assets/right_button.png" id="3_nmnv2"]
+[ext_resource type="FontFile" uid="uid://m56bor3st0ml" path="res://assets/Open_Sans,Tiny5/Tiny5/Tiny5-Regular.ttf" id="5_qfreq"]
+[ext_resource type="Texture2D" uid="uid://c4iinddfstb2m" path="res://assets/Circle.png" id="5_rt3dq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8jfhv"]
+size = Vector2(25, 25)
+
+[node name="Mobile_GUI" type="CanvasLayer"]
+follow_viewport_enabled = true
+script = ExtResource("1_st3ob")
+
+[node name="up" type="TouchScreenButton" parent="."]
+position = Vector2(938, 454)
+scale = Vector2(8, 8)
+texture_normal = ExtResource("1_8vtjs")
+shape = SubResource("RectangleShape2D_8jfhv")
+passby_press = true
+action = "up"
+
+[node name="left" type="TouchScreenButton" parent="."]
+position = Vector2(85, 454)
+scale = Vector2(8, 8)
+texture_normal = ExtResource("2_fu4or")
+shape = SubResource("RectangleShape2D_8jfhv")
+passby_press = true
+action = "left"
+
+[node name="right" type="TouchScreenButton" parent="."]
+position = Vector2(278, 454)
+scale = Vector2(8, 8)
+texture_normal = ExtResource("3_nmnv2")
+shape = SubResource("RectangleShape2D_8jfhv")
+passby_press = true
+action = "right"
+
+[node name="escape" type="TouchScreenButton" parent="."]
+scale = Vector2(0.34375, 0.34375)
+texture_normal = ExtResource("5_rt3dq")
+action = "escape"
+
+[node name="Label" type="Label" parent="escape"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.0
+offset_top = -11.5
+offset_right = 27.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_qfreq")
+theme_override_font_sizes/font_size = 64
+text = "Escape"

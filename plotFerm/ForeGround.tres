@@ -1,0 +1,41 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://dsums8y5nj3es"]
+
+[ext_resource type="Texture2D" uid="uid://b02rs7emjaxkw" path="res://assets/texture.atlas.png" id="1_msgnl"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_en8ps"]
+texture = ExtResource("1_msgnl")
+0:0/next_alternative_id = 4
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, -8, 8, -8, -6, 8, -6.01041)
+0:0/2 = 2
+0:0/2/modulate = Color(0.74558, 0.74558, 0.74558, 1)
+0:0/3 = 3
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, -8, 8, -8, -6, 8, -6.01041)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, -8, 8, -8, -6, 8, -6.01041)
+3:0/0 = 0
+0:1/next_alternative_id = 4
+0:1/0 = 0
+0:1/1 = 1
+0:1/1/modulate = Color(0.745098, 0.745098, 0.745098, 1)
+0:1/2 = 2
+0:1/2/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
+1:1/next_alternative_id = 2
+1:1/0 = 0
+1:1/1 = 1
+1:1/1/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
+3:3/0 = 0
+0:3/size_in_atlas = Vector2i(3, 1)
+0:3/0 = 0
+
+[resource]
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_en8ps")

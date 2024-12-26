@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://cqadqwkv17mgh"]
+
+[ext_resource type="Texture2D" uid="uid://b02rs7emjaxkw" path="res://assets/texture.atlas.png" id="1_pujk1"]
+[ext_resource type="PackedScene" uid="uid://behrhe55ojd7y" path="res://scenes/killzone.tscn" id="2_gx5yy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f8frc"]
+size = Vector2(10, 4)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v7rha"]
+radius = 4.0
+height = 12.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_57ay8"]
+radius = 3.0
+
+[node name="Spike" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_pujk1")
+hframes = 4
+vframes = 4
+frame = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_f8frc")
+debug_color = Color(0.855375, 0.000769129, 0.887078, 0.42)
+
+[node name="killzone" parent="." instance=ExtResource("2_gx5yy")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+position = Vector2(0, 4)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_v7rha")
+
+[node name="killzone2" parent="." instance=ExtResource("2_gx5yy")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone2"]
+position = Vector2(0, -3)
+shape = SubResource("CircleShape2D_57ay8")

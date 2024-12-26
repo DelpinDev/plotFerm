@@ -1,0 +1,13 @@
+res://scenes/ball.tscn::9eeb51c79eaa299a06e055b85ddea2f9::1734953416::res://.godot/exported/133200997/export-d687370f64a28adc6cd2dc42f9ce6f46-ball.scn
+res://scenes/cat.tscn::130f799b4d44ead40411cc6606cd8fdf::1735046833::res://.godot/exported/133200997/export-6006eecc8d498190a776084499fc9af6-cat.scn
+res://scenes/coin.tscn::170847f46bbcb356b04f46a68dd57816::1734963088::res://.godot/exported/133200997/export-96b2131180b71dd158e52c5527d22dd4-coin.scn
+res://scenes/killzone.tscn::c2be716286a561c34c03882203abba7b::1734953416::res://.godot/exported/133200997/export-494bf1445653c44a49a39c8f8b1ce8d0-killzone.scn
+res://scenes/main.tscn::15648808acaba79bd98156277802584f::1735052404::res://.godot/exported/133200997/export-3ad5c15c4f3250da0cc7c1af1770d85f-main.scn
+res://scenes/player.tscn::fcf3852d7cdb9561405b96c5d4170671::1735052404::res://.godot/exported/133200997/export-234fb6894ec6226e856ab7f825500d3d-player.scn
+res://scenes/spike.tscn::d620563f8171e020c90a877bef3515b7::1735046833::res://.godot/exported/133200997/export-9f66bc2a5b738b9ace7cde5821527d98-spike.scn
+res://ForeGround.tres::934d85a0c97c7fabd85c7f734e7255a3::1735046833::res://.godot/exported/133200997/export-397ff18c83e10512f3867e669414ad68-ForeGround.res
+res://scenes/gui.tscn::9c755c824d694e1c68da9bb8c8ff8bef::1735052404::res://.godot/exported/133200997/export-c9df48fc02664b28cf59cb80516ff5bd-gui.scn
+res://scenes/level_01.tscn::06bcc81e34e42fbacd91036d50bf6146::1735052404::res://.godot/exported/133200997/export-9db58f77472441aec537bb99f6c221d5-level_01.scn
+res://scenes/mobile_gui.tscn::4449c26ecd47db490be4e2a9fe93bb78::1735052404::res://.godot/exported/133200997/export-4bf46fa1c9e78d3e54da715ea5ccfbbd-mobile_gui.scn
+res://scenes/check_point.tscn::9fce6c229570a1f4c10685366655936f::1735051595::res://.godot/exported/133200997/export-afffaff23acc479de2787654efb25afb-check_point.scn
+res://scenes/tutorial.tscn::1e322a68aa267f3622956c2b4c897d47::1735052404::res://.godot/exported/133200997/export-42ce494387c984238fc1312df9601261-tutorial.scn
