@@ -1,5 +1,7 @@
-extends CanvasLayer
+extends Area2D
 
+
+@onready var marker_2d = $Marker2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -8,7 +10,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Main.mobile_player == true:
-		visible = true
-		
 	pass
+
+
+func _on_body_entered(body):
+	body.position = marker_2d.position
+	pass # Replace with function body.

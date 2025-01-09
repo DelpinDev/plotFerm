@@ -52,8 +52,7 @@ theme_override_font_sizes/font_size = 32
 text = "Start"
 metadata/_edit_use_anchors_ = true
 
-[node name="Quit" type="Button" parent="HUD"]
-visible = false
+[node name="Settings" type="Button" parent="HUD"]
 anchors_preset = -1
 anchor_left = 0.220486
 anchor_top = 0.933642
@@ -67,7 +66,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_xxlly")
 theme_override_font_sizes/font_size = 32
-text = "Quit"
+text = "Settings"
+alignment = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Levels" type="CanvasLayer" parent="."]
@@ -75,54 +75,34 @@ visible = false
 follow_viewport_enabled = true
 
 [node name="Tutorial" type="Button" parent="Levels"]
-anchors_preset = -1
-anchor_left = 0.220486
-anchor_top = 0.847222
-anchor_right = 0.293403
-anchor_bottom = 0.875
-offset_left = -22.0
-offset_top = -69.0
-offset_right = 22.0
-offset_bottom = -43.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = 232.0
+offset_top = 480.0
+offset_right = 360.0
+offset_bottom = 524.0
 theme_override_fonts/font = ExtResource("2_xxlly")
 theme_override_font_sizes/font_size = 32
 text = "Tutorial"
 
 [node name="Level_01" type="Button" parent="Levels"]
-anchors_preset = -1
-anchor_left = 0.220486
-anchor_top = 0.847222
-anchor_right = 0.293403
-anchor_bottom = 0.875
-offset_left = -22.0
-offset_top = -13.0
-offset_right = 22.0
-offset_bottom = 13.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = 232.0
+offset_top = 536.0
+offset_right = 360.0
+offset_bottom = 580.0
 theme_override_fonts/font = ExtResource("2_xxlly")
 theme_override_font_sizes/font_size = 32
 text = "Level 01"
 
 [node name="Back" type="Button" parent="Levels"]
-anchors_preset = -1
-anchor_left = 0.220486
-anchor_top = 0.847222
-anchor_right = 0.293403
-anchor_bottom = 0.875
-offset_left = -22.0
-offset_top = 43.0
-offset_right = 22.0
-offset_bottom = 69.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = 232.0
+offset_top = 592.0
+offset_right = 360.0
+offset_bottom = 636.0
 theme_override_fonts/font = ExtResource("2_xxlly")
 theme_override_font_sizes/font_size = 32
 text = "Back"
 
 [node name="Mobile_Option" type="CanvasLayer" parent="."]
+visible = false
 follow_viewport_enabled = true
 
 [node name="ColorRect" type="ColorRect" parent="Mobile_Option"]
@@ -217,6 +197,51 @@ theme_override_fonts/font = ExtResource("2_xxlly")
 theme_override_font_sizes/font_size = 32
 text = "Mobiel"
 
+[node name="Settings" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="Back" type="Button" parent="Settings"]
+anchors_preset = -1
+anchor_left = 0.220486
+anchor_top = 0.847222
+anchor_right = 0.293403
+anchor_bottom = 0.875
+offset_left = -22.0
+offset_top = 43.0
+offset_right = 22.0
+offset_bottom = 69.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_xxlly")
+theme_override_font_sizes/font_size = 32
+text = "Back"
+
+[node name="ismobile" type="Label" parent="Settings"]
+anchors_preset = -1
+anchor_left = 0.477431
+anchor_top = 0.645833
+anchor_right = 0.432292
+anchor_bottom = 0.621142
+offset_left = -310.0
+offset_top = 45.5
+offset_right = -186.0
+offset_bottom = 81.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_xxlly")
+theme_override_font_sizes/font_size = 16
+text = "is mobile
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CheckBox" type="CheckBox" parent="Settings"]
+offset_left = 304.0
+offset_top = 464.0
+offset_right = 328.0
+offset_bottom = 488.0
+
 [node name="Title" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -246,8 +271,11 @@ position = Vector2(232, 536)
 stream = ExtResource("4_peob4")
 
 [connection signal="pressed" from="HUD/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="HUD/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Levels/Tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="Levels/Level_01" to="." method="_on_level_01_pressed"]
 [connection signal="pressed" from="Levels/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Mobile_Option/Computer" to="." method="_on_computer_pressed"]
 [connection signal="pressed" from="Mobile_Option/Mobile" to="." method="_on_mobile_pressed"]
+[connection signal="pressed" from="Settings/Back" to="." method="_on_back_pressed"]
+[connection signal="toggled" from="Settings/CheckBox" to="." method="_on_check_box_toggled"]

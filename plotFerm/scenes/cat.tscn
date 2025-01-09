@@ -4,24 +4,21 @@
 [ext_resource type="Texture2D" uid="uid://d3c8nt4omjrpq" path="res://assets/cat.png" id="2_wrl51"]
 [ext_resource type="PackedScene" uid="uid://behrhe55ojd7y" path="res://scenes/killzone.tscn" id="3_21uu5"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ebfmc"]
-radius = 4.0
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yxhie"]
 radius = 5.0
 height = 12.0
 
-[node name="cat" type="StaticBody2D"]
-collision_mask = 2
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q60t8"]
+radius = 2.0
+height = 10.0
+
+[node name="cat" type="RigidBody2D"]
+lock_rotation = true
 script = ExtResource("1_h3upq")
+direction = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_wrl51")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 2)
-shape = SubResource("CircleShape2D_ebfmc")
-debug_color = Color(0.89009, 0.000253938, 0.794201, 0.42)
 
 [node name="killzone" parent="." instance=ExtResource("3_21uu5")]
 
@@ -31,13 +28,23 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_yxhie")
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
-target_position = Vector2(-9, 0)
+target_position = Vector2(-11, 0)
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
-target_position = Vector2(9, 0)
+target_position = Vector2(11, 0)
 
 [node name="RayCastRightDown" type="RayCast2D" parent="."]
-target_position = Vector2(8, 8)
+target_position = Vector2(8, 10)
 
 [node name="RayCastLeftDown" type="RayCast2D" parent="."]
-target_position = Vector2(-8, 8)
+target_position = Vector2(-8, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("CapsuleShape2D_q60t8")
+debug_color = Color(0.61465, 0.404741, 0.900649, 0.42)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

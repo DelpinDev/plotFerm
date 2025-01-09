@@ -3,8 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://b02rs7emjaxkw" path="res://assets/texture.atlas.png" id="1_pujk1"]
 [ext_resource type="PackedScene" uid="uid://behrhe55ojd7y" path="res://scenes/killzone.tscn" id="2_gx5yy"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_f8frc"]
-size = Vector2(10, 4)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_on5gu"]
+radius = 2.7
+height = 13.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v7rha"]
 radius = 4.0
@@ -17,13 +18,13 @@ radius = 3.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_pujk1")
-hframes = 4
-vframes = 4
-frame = 9
+hframes = 6
+vframes = 6
+frame = 13
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 4)
-shape = SubResource("RectangleShape2D_f8frc")
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_on5gu")
 debug_color = Color(0.855375, 0.000769129, 0.887078, 0.42)
 
 [node name="killzone" parent="." instance=ExtResource("2_gx5yy")]
